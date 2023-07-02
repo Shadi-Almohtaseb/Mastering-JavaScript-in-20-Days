@@ -4,7 +4,8 @@ Basics javascript commands, What is the Document Object Model `(DOM)` and how to
 
 ## Lesson Summary
 
-- use `let` and `const` to declare variables and make some simple calculation
+- use `let` and `const` to declare variables and make some simple calculation.
+- some operators like += -= *= *=
 - use Document to add, edit and read the elements of the web page, like `document.title` and `document.getElementById("board")` and `document.getElementById("p1-name").textContent = my content`.
 
 ## Coding Exercises
