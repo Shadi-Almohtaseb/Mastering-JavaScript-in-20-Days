@@ -4,7 +4,7 @@ Learning how to use `map` and `filter`, and the `spread operator` and some JavaS
 
 ## Lesson Summary
 
-- Filtering the contact array to check if the first Name matches the name form the props.
+- Filtering the contact array to check if the first Name matches the name from the props.
 - Make a simple validation before returning the contact details.
 - Dealing with arrays and JavaScript functions like `arr.slice(2,4)`.
 - learn how to use the spread operator on the arrays like `[...fragment]`.
