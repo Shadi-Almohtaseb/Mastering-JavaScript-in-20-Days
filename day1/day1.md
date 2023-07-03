@@ -1,10 +1,10 @@
 # Day 1: Introduction to JS
 
-Basics javascript commands, What is the Document Object Model `(DOM)` and how to use it.
+Basics javascript commands, What is the Document Object Model `(DOM)` and how to use it and write simple JavaScript code.
 
 ## Lesson Summary
 
-- Use `let` and `const` to declare variables and make some simple calculation.
+- Use `let` and `const` to declare variables and make some simple calculations.
 - Some operators like += -= *= *=
 - Use Document to add, edit and read the elements of the web page, like `document.title` and `document.getElementById("board")` and `document.getElementById("p1-name").textContent = my content`.
 
@@ -17,7 +17,7 @@ let a = 5;
 let b = 12;
 let c = 4.6;
 
-// Only change code below this line
+// Only change the code below this line
 a = a * 5;
 b = 3 * b;
 c = c * 10;
