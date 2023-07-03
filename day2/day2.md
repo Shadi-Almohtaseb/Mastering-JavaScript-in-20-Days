@@ -1,4 +1,4 @@
-# Day 1: Expressions, Arrays, Objects
+# Day 2: Expressions, Arrays, Objects
 
 Learning how to use `map` and `filter`, and the `spread operator` and some JavaScript functions.
 
