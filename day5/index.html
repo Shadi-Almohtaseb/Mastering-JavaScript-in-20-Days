@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Rick & Morty</title>
+  </head>
+  <body>
+    <h1 class="title">Character List</h1>
+    <div class="search-bar">
+      <form class="form">
+        <button>
+          <svg
+            width="17"
+            height="16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            aria-labelledby="search"
+          >
+            <path
+              d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+              stroke="currentColor"
+              stroke-width="1.333"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+        </button>
+        <input
+          class="input"
+          placeholder="Filter by name..."
+          type="text"
+          id="searchInput"
+        />
+        <button class="reset" type="reset">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
+        </button>
+      </form>
+    </div>
+    <div class="header">
+      <div class="filter-container">
+        <div class="clear-filter">
+          <h2>Filters</h2>
+          <button class="filter-button button" data-category="">Clear</button>
+        </div>
+        <div class="wrap-collabsible">
+          <input id="collapsible" class="toggle" type="checkbox" />
+          <label for="collapsible" class="lbl-toggle">Filter by Status</label>
+          <div class="collapsible-content">
+            <div class="content-inner">
+              <button class="filter-button button" data-category="Alive">
+                Alive
+              </button>
+              <button class="filter-button button" data-category="Dead">
+                Dead
+              </button>
+              <button class="filter-button button" data-category="unknown">
+                Unknown
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="filter-container">
+        <h2>Created by <span class="shadi">Shadi Almohtaseb</span></h2>
+      </div>
+    </div>
+    <ul id="characterList" class="characterList">
+      <!-- <li class="card">
+        <img
+          class="wikiImage"
+          src="https://source.unsplash.com/random"
+          alt="image"
+        />
+        <div class="content">
+          <div class="liftContent">
+            <span> Ricky martin </span>
+            <h3>Last Location:</h3>
+            <h4>Earth</h4>
+          </div>
+          <div class="rightContent">
+            <span>Alive</span>
+            <span>Human</span>
+          </div>
+        </div>
+      </li>
+      <li class="card">
+        <img
+          class="wikiImage"
+          src="https://source.unsplash.com/random"
+          alt="image"
+        />
+        <div class="content">
+          <div class="liftContent">
+            <span> Ricky martin </span>
+            <h3>Last Location:</h3>
+            <h4>Earth</h4>
+          </div>
+          <div class="rightContent">
+            <span>Alive</span>
+            <span>Human</span>
+          </div>
+        </div>
+      </li>
+      <li class="card">
+        <img
+          class="wikiImage"
+          src="https://source.unsplash.com/random"
+          alt="image"
+        />
+        <div class="content">
+          <div class="liftContent">
+            <span> Ricky martin </span>
+            <h3>Last Location:</h3>
+            <h4>Earth</h4>
+          </div>
+          <div class="rightContent">
+            <span>Alive</span>
+            <span>Human</span>
+          </div>
+        </div>
+      </li> -->
+    </ul>
+    <script src="script.js"></script>
+  </body>
+</html>

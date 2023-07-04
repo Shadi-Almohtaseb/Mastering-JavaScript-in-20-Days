@@ -1,0 +1,356 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(35, 35, 35);
+  font-family: "Josefin Sans", sans-serif;
+  margin-bottom: 65px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  color: #fff;
+}
+
+.characterList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+li {
+  list-style: none;
+}
+
+.card {
+  width: 400px;
+  background: #fff;
+  border-radius: 5px;
+  transition: transform 0.6s ease; /* Updated transition property */
+}
+
+.card:hover {
+  transform: scale(1.08);
+  cursor: pointer;
+}
+
+.wikiImage {
+  width: 400px;
+  border-radius: 5px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 18px;
+}
+
+.rightContent,
+.liftContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rightContent > :nth-child(1) {
+  /* Updated selector */
+  text-align: center;
+  background-color: green;
+  padding: 8px 10px;
+  border-radius: 15px;
+  color: #fff;
+  font-size: larger;
+}
+
+.rightContent > :nth-child(3) {
+  /* Updated selector */
+  text-align: center;
+  background: linear-gradient(145deg, blue, #ff00d4);
+  padding: 8px 10px;
+  border-radius: 15px;
+  color: #fff;
+  font-size: larger;
+}
+.rightContent > :nth-child(2) {
+  /* Updated selector */
+  text-align: center;
+  background-color: brown;
+  padding: 8px 10px;
+  border-radius: 15px;
+  color: #fff;
+  font-size: larger;
+}
+
+.liftContent > :nth-child(1) {
+  /* Updated selector */
+  font-size: x-large;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.filter-container {
+  width: 400px;
+  background: linear-gradient(#212121, #212121) padding-box,
+    linear-gradient(145deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  border: 2px solid transparent;
+  padding: 32px 24px;
+  font-size: 14px;
+  font-family: inherit;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+  border-radius: 16px;
+}
+
+.clear-filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.message {
+  color: #fff;
+  font-weight: 700;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 60px 120px;
+}
+.shadi {
+  text-decoration: underline;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.wrap-collapsible {
+  margin: 1.2rem 0;
+}
+
+.lbl-toggle {
+  display: block;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1rem;
+  color: #ddd;
+  background: #0069ff;
+  cursor: pointer;
+  border-radius: 7px;
+  transition: all 0.25s ease-out;
+}
+
+.lbl-toggle:hover {
+  color: #fff;
+}
+
+.lbl-toggle::before {
+  content: " ";
+  display: inline-block;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+  vertical-align: middle;
+  margin-right: 0.7rem;
+  transform: translateY(-2px);
+  transition: transform 0.2s ease-out;
+}
+
+.toggle:checked + .lbl-toggle::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.collapsible-content {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.25s ease-in-out;
+}
+
+.toggle:checked + .lbl-toggle + .collapsible-content {
+  max-height: 350px;
+}
+
+.toggle:checked + .lbl-toggle {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.collapsible-content .content-inner {
+  background: rgba(0, 105, 255, 0.2);
+  border-bottom: 1px solid rgba(0, 105, 255, 0.45);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.collapsible-content p {
+  margin-bottom: 0;
+}
+
+.button {
+  position: relative;
+  width: 120px;
+  height: 40px;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: none;
+  padding: 12px;
+  gap: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 10;
+  font-size: larger;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: -4px;
+  top: -1px;
+  margin: auto;
+  width: 128px;
+  height: 48px;
+  border-radius: 10px;
+  background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+  z-index: -10;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.button::after {
+  content: "";
+  z-index: -10;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(20px);
+}
+
+.button:hover::after {
+  filter: blur(30px);
+}
+
+.button:hover::before {
+  transform: rotate(-180deg);
+}
+
+.button:active::before {
+  scale: 0.7;
+}
+
+/* Search bar*/
+
+/* From uiverse.io by @satyamchaudharydev */
+/* removing default style of button */
+
+.form button {
+  border: none;
+  background: none;
+  color: #8b8ba7;
+}
+/* styling of whole input container */
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  --timing: 0.3s;
+  --width-of-input: 450px;
+  --height-of-input: 40px;
+  --border-height: 3px;
+  --input-bg: #fff;
+  --border-color: #3d3dff;
+  --border-radius: 30px;
+  --after-border-radius: 1px;
+  position: relative;
+  width: var(--width-of-input);
+  height: var(--height-of-input);
+  display: flex;
+  align-items: center;
+  padding-inline: 0.8em;
+  border-radius: var(--border-radius);
+  transition: border-radius 0.5s ease;
+  background: var(--input-bg, #fff);
+}
+/* styling of Input */
+.input {
+  font-size: 0.9rem;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  padding-inline: 0.5em;
+  padding-block: 0.7em;
+  border: none;
+}
+/* styling of animated border */
+.form:before {
+  content: "";
+  position: absolute;
+  background: var(--border-color);
+  transform: scaleX(0);
+  transform-origin: center;
+  width: 100%;
+  height: var(--border-height);
+  left: 0;
+  bottom: 0;
+  border-radius: 1px;
+  transition: transform var(--timing) ease;
+}
+/* Hover on Input */
+.form:focus-within {
+  border-radius: var(--after-border-radius);
+}
+
+input:focus {
+  outline: none;
+}
+/* here is code of animated border */
+.form:focus-within:before {
+  transform: scale(1);
+}
+/* styling of close button */
+/* == you can click the close button to remove text == */
+.reset {
+  border: none;
+  background: none;
+  opacity: 0;
+  visibility: hidden;
+}
+/* close button shown when typing */
+input:not(:placeholder-shown) ~ .reset {
+  opacity: 1;
+  visibility: visible;
+}
+/* sizing svg icons */
+.form svg {
+  width: 17px;
+  margin-top: 3px;
+}
