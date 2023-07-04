@@ -8,6 +8,13 @@ Learning how to deal with arrow functions in JavaScript and the scoping of the v
 - Differentiate between the scope of let and const.
 - Useing the shift() and push() functions on array.
 
+## Quiz Project 
+- JavaScript was invented in 1995.
+- Strings in javascript are not editable values.
+- 1 + 1 === 2 is true.
+- '1' + '1' === '2' is false.
+- typeof ['J', 'S'] === 'array' is false.
+
 ## Coding Exercises
 
 1.
