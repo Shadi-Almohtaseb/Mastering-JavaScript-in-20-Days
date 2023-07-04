@@ -1,12 +1,17 @@
-# Day 4: Filter, Map, Arrays
+# Day 4: Filter, Map, Arrays, handling events
 
-Practicing more about filtering and mapping arrays and multiple conditional operators.
+Practicing more about filtering and mapping arrays and multiple conditional operators, and more importantly handling events.
 
 ## Lesson Summary
 
 - Filter array list and mapping over it's items.
 - Use multiple conditional operators.
-- Switch Case statment.
+- Switch Case statement.
+- ```javascript
+  document.addEventListener("click", () => {
+    console.log("clicked")
+});
+  ```
 
 ## Coding Exercises
 
