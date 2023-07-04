@@ -10,7 +10,7 @@ Practicing more about filtering and mapping arrays and multiple conditional oper
 - ```javascript
   document.addEventListener("click", () => {
     console.log("clicked")
-});
+  });
   ```
 
 ## Coding Exercises
