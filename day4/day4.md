@@ -12,6 +12,7 @@ Practicing more about filtering and mapping arrays and multiple conditional oper
     console.log("clicked")
   });
   ```
+- `"dblclick" "mouseover" "mouseout" is also some other events.`
 
 ## Coding Exercises
 
