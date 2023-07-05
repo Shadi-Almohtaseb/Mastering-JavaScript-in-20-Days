@@ -9,78 +9,45 @@ Practicing more about filtering and mapping arrays and multiple conditional oper
 - Switch Case statement.
 - ```javascript
   document.addEventListener("click", () => {
-    console.log("clicked")
+    console.log("clicked");
   });
   ```
 - `"dblclick" "mouseover" "mouseout" is also some other events.`
 
-## Coding Exercises
-
-1.
-
-### [Use Multiple Conditional (Ternary) Operators](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/use-multiple-conditional-ternary-operators)
+## Coding Example
 
 ```javascript
-function checkSign(num) {}
-checkSign(10);
-```
+const numbersList = document.getElementById("numbersList");
+const filterButton = document.getElementById("filterButton");
+const mapButton = document.getElementById("mapButton");
 
-2.
+// Array of numbers
+let numbers = [1, 2, 3, 4, 5];
 
-### [Golf Code](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/golf-code)
-
-```javascript
-const names = [
-  "Hole-in-one!",
-  "Eagle",
-  "Birdie",
-  "Par",
-  "Bogey",
-  "Double Bogey",
-  "Go Home!",
-];
-function golfScore(par, strokes) {
-  // Only change code below this line
-  return "Change Me";
-  // Only change code above this line
-}
-golfScore(5, 4);
-```
-
-3.
-
-### [Use the map Method to Extract Data from an Array](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/use-the-map-method-to-extract-data-from-an-array)
-
-```javascript
-// The global variable
-// Only change code below this line
-const ratings = [];
-for (let i = 0; i < watchList.length; i++) {
-  ratings.push({
-    title: watchList[i]["Title"],
-    rating: watchList[i]["imdbRating"],
-  });
+function renderNumbersList() {
+  numbersList.innerHTML = numbers
+    .map((number) => `<li>${number}</li>`)
+    .join("");
 }
 
-// Only change code above this line
+filterButton.addEventListener("click", function () {
+  // Filter odd numbers from the array
+  numbers = numbers.filter((number) => number % 2 === 1);
+  renderNumbersList();
+});
 
-console.log(JSON.stringify(ratings));
-```
+mapButton.addEventListener("click", function () {
+  // Double each number in the array
+  numbers = numbers.map((number) => number * 2);
+  renderNumbersList();
+});
 
-4.
-
-### [Use the filter Method to Extract Data from an Array](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/use-the-filter-method-to-extract-data-from-an-array)
-
-```javascript
-// Only change code below this line
-const filteredList = "";
-// Only change code above this line
-console.log(filteredList);
+renderNumbersList();
 ```
 
 ## My Solutions
 
-1.
+1. ### [Use Multiple Conditional (Ternary) Operators](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/use-multiple-conditional-ternary-operators)
 
 ```javascript
 function checkSign(num) {
@@ -89,7 +56,7 @@ function checkSign(num) {
 checkSign(10);
 ```
 
-2.
+2. ### [Golf Code](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/golf-code)
 
 ```javascript
 const names = [
@@ -125,7 +92,7 @@ function golfScore(par, strokes) {
 golfScore(4, 1);
 ```
 
-3.
+3. ### [Use the map Method to Extract Data from an Array](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/use-the-map-method-to-extract-data-from-an-array)
 
 ```javascript
 // Only change code below this line
@@ -138,7 +105,7 @@ ratings = watchList.map((item, index) => ({
 console.log(JSON.stringify(ratings));
 ```
 
-4.
+4. ### [Use the filter Method to Extract Data from an Array](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/use-the-filter-method-to-extract-data-from-an-array)
 
 ```javascript
 // Only change code below this line

@@ -9,81 +9,48 @@ Learning how to use `map` and `filter`, and the `spread operator` and some JavaS
 - Dealing with arrays and JavaScript functions like `arr.slice(2,4)`.
 - learn how to use the spread operator on the arrays like `[...fragment]`.
 
-## Coding Exercises
-
-1.
+## Coding Example
 
 ```javascript
-// Setup
-const contacts = [
-  {
-    firstName: "Akira",
-    lastName: "Laine",
-    number: "0543236543",
-    likes: ["Pizza", "Coding", "Brownie Points"],
-  },
-  {
-    firstName: "Harry",
-    lastName: "Potter",
-    number: "0994372684",
-    likes: ["Hogwarts", "Magic", "Hagrid"],
-  },
-  {
-    firstName: "Sherlock",
-    lastName: "Holmes",
-    number: "0487345643",
-    likes: ["Intriguing Cases", "Violin"],
-  },
-  {
-    firstName: "Kristian",
-    lastName: "Vos",
-    number: "unknown",
-    likes: ["JavaScript", "Gaming", "Foxes"],
-  },
-];
+const x = 10;
+const y = 5;
+const sum = x + y;
+const product = x * y;
 
-function lookUpProfile(name, prop) {
-  // Only change code below this line
-  // Only change code above this line
-}
+console.log("Sum:", sum);
+console.log("Product:", product);
 
-lookUpProfile("Akira", "likes");
+// Arrays
+const numbers = [1, 2, 3, 4, 5];
+console.log("Numbers:", numbers);
+
+const fruits = ["apple", "banana", "orange"];
+console.log("Fruits:", fruits);
+
+const mixedArray = [1, "apple", true, null];
+console.log("Mixed Array:", mixedArray);
+
+console.log("First Fruit:", fruits[0]);
+console.log("Array Length:", numbers.length);
+
+// Objects
+const person = {
+  name: "John Doe",
+  age: 25,
+  isStudent: true,
+};
+
+console.log("Person:", person);
+console.log("Person Name:", person.name);
+console.log("Person Age:", person["age"]);
+
+person.city = "New York";
+console.log("Updated Person:", person);
 ```
-
-2.
-
-```javascript
-function forecast(arr) {
-  // Only change code below this line
-
-  return arr;
-}
-
-// Only change code above this line
-console.log(
-  forecast(["cold", "rainy", "warm", "sunny", "cool", "thunderstorms"])
-);
-```
-
-3.
-
-```javascript
-function spreadOut() {
-  let fragment = ["to", "code"];
-  let sentence; // Change this line
-  return sentence;
-}
-
-console.log(spreadOut());
-```
-
-1. ### [Profile Lookup](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/profile-lookup)
-2. ### [Copy Array Items Using slice()](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-data-structures/copy-array-items-using-slice)
-3. ### [Combine Arrays with the Spread Operator](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-data-structures/combine-arrays-with-the-spread-operator)
 
 #### My Solution
 
-1.
+1. ### [Profile Lookup](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/profile-lookup)
 
 ```javascript
 // Setup
@@ -131,7 +98,7 @@ function lookUpProfile(name, prop) {
 lookUpProfile("Akira", "address");
 ```
 
-2.
+2. ### [Copy Array Items Using slice()](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-data-structures/copy-array-items-using-slice)
 
 ```javascript
 function forecast(arr) {
@@ -145,7 +112,7 @@ console.log(
 );
 ```
 
-3.
+3. ### [Combine Arrays with the Spread Operator](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-data-structures/combine-arrays-with-the-spread-operator)
 
 ```javascript
 function spreadOut() {

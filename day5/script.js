@@ -15,10 +15,6 @@ const displayCharacters = (data) => {
   const list = document.getElementById("characterList");
   let charactersHTML = "";
 
-  //   if (data.length === 0) {
-  //     charactersHTML = "There is no character match!";
-  //   }
-
   const filterByCategory = (category) => {
     if (category) {
       charactersHTML = "";
@@ -84,7 +80,6 @@ const displayCharacters = (data) => {
     });
   });
 
-  // Display all characters initially
   filterByCategory("");
 };
 
