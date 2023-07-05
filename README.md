@@ -24,7 +24,7 @@ exercises provided by FreeCodeCamp to be a master in Javascript.
 
 ## Daily Learning Process
 
-1. Each day, I watched 90 minutes of the assigned courses listed above.
+1. Each day, I'm training for about 4 hours on the assigned courses listed above and doing some other exercises.
 2. I have solved all the JavaScript coding challenges that will be provided by the GSG team and also not provided (113 exercises for the basis of javascript) and also the other exercises.
 3. I summarized the daily learning and document challenge solutions on a separate readme page.
 4. Then repeat this process for the next 20 days, gradually advancing my JavaScript skills.
