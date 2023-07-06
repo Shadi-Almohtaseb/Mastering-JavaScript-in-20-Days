@@ -8,6 +8,7 @@ It's includes `Introduction`, `JavaScript Principles`, and `Functions & Callback
 - Learn what is the `callback function` and how to use it.
 - How to implement the `higher order function` and passing the callback to it.
 - Writing the callback as an arrow function.
+- doing a simple recursion function.
 
 ## Coding Example
 
