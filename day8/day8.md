@@ -1,139 +1,114 @@
 # Day 8: Async JavaScript and Promises
 
-It's about the `closure` concept which is the function that return another function, and here is some examples.
+practicing more about the promises and the asynchronous functions with some exercises.
 
 ## Lesson Summary
 
-- What is closure.
-- Function that remember the previous state.
-- How to implement closure in different ways.
-- calling multi functions.
+- How async function work `(async ,await)`.
+- The line by line execution for javascript.
+- Handling the promises.
+- .then .catch block.
 
 ## Coding Example
 
 ```javascript
-// EX 1)
-function createCounter() {
-  let count = 0;
-
-  return function () {
-    count++;
-    return count;
-  };
+function fetchData() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const data = "Some data fetched from an API";
+      resolve(data);
+      reject("Error: Failed to fetch data");
+    }, 2000);
+  });
 }
 
-const counter = createCounter();
-console.log(counter()); // Output: 1
-console.log(counter()); // Output: 2
-console.log(counter()); // Output: 3
+console.log("Fetching data...");
 
-//*****************************************************
+fetchData()
+  .then((data) => {
+    console.log("Data fetched:", data);
+  })
+  .catch((error) => {
+    console.log("Error:", error);
+  });
 
-//EX 2)
-function createSecretCode() {
-  let secretCode = "Open Sesame!";
-
-  return {
-    revealSecret() {
-      console.log(secretCode);
-    },
-  };
-}
-
-const secret = createSecretCode();
-secret.revealSecret(); // Output: Open Sesame!
-
-//*****************************************************
-
-//EX 3)
-function createPerson(name) {
-  return {
-    getName() {
-      return name;
-    },
-    setName(newName) {
-      name = newName;
-    },
-  };
-}
-
-const person = createPerson("John");
-console.log(person.getName()); // Output: John
-
-person.setName("Jane");
-console.log(person.getName()); // Output: Jane
+console.log("After fetch call");
 ```
 
 #### My Solution
 
-1. ### [Exercises for closures](https://github.com/orjwan-alrajaby/gsg-expressjs-backend-training-2023/blob/main/learning-sprint-1/week2-day2-tasks/tasks.md)
+1. ### [Exercises for Async JavaScript and Promises](https://github.com/orjwan-alrajaby/gsg-expressjs-backend-training-2023/blob/main/learning-sprint-1/week2-day3-tasks/tasks.md)
 
 ```javascript
-const createCounter = (start) => {
-  let counter = start;
-  const increment = () => {
-    return counter++;
-  };
-  return increment;
+const executeInSequenceWithCBs = async (tasks) => {
+  const messages = [];
+
+  for (let i = 0; i < tasks.length; i++) {
+    const currentTask = tasks[i];
+    await new Promise((resolve) => {
+      currentTask((msg) => {
+        messages.push(msg);
+        resolve();
+      });
+    });
+  }
+
+  return messages;
 };
 
-const myFun = createCounter(0);
-console.log(myFun()); //0
-console.log(myFun()); //1
-console.log(myFun()); //2
-console.log(myFun()); //3
+executeInSequenceWithCBs(asyncTasks).then((msg) => console.log(msg));
 ```
 
-2. ### [Exercises for closures](https://github.com/orjwan-alrajaby/gsg-expressjs-backend-training-2023/blob/main/learning-sprint-1/week2-day2-tasks/tasks.md)
+2. ### [Exercises for Async JavaScript and Promises](https://github.com/orjwan-alrajaby/gsg-expressjs-backend-training-2023/blob/main/learning-sprint-1/week2-day3-tasks/tasks.md)
 
 ```javascript
-const calculateAverage = (arr) => {
-  const calculate = () => {
-    let sum = 0;
-    for (let i = 0; i < arr.length; i++) {
-      sum += arr[i];
-    }
-    return sum / arr.length;
-  };
-  return calculate;
+const executeInParallelWithPromises = async (apis) => {
+  const promises = apis.map(async (api) => {
+    const res = await fetch(api.apiUrl);
+    const data = await res.json();
+    return {
+      apiName: api.apiName,
+      apiUrl: api.apiUrl,
+      apiData: data,
+    };
+  });
+
+  const results = await Promise.all(promises);
+  return results;
 };
 
-const myFun = calculateAverage([1, 2, 3, 4, 5]);
-console.log(myFun()); //3
+executeInParallelWithPromises(apis)
+  .then((results) => {
+    console.log(results);
+  })
+  .catch((error) => {
+    console.log("Error:", error);
+  });
 ```
 
-3. ### [Exercises for closures](https://github.com/orjwan-alrajaby/gsg-expressjs-backend-training-2023/blob/main/learning-sprint-1/week2-day2-tasks/tasks.md)
+3. ### [Exercises for Async JavaScript and Promises](https://github.com/orjwan-alrajaby/gsg-expressjs-backend-training-2023/blob/main/learning-sprint-1/week2-day3-tasks/tasks.md)
 
 ```javascript
-const powerOf = (base) => {
-  const calculate = (exp) => {
-    return base ** exp;
-  };
-  return calculate;
+const executeInSequenceWithPromises = async (apis) => {
+  const results = await Promise.all(
+    apis.map(async (api) => {
+      const res = await fetch(api.apiUrl);
+      const data = await res.json();
+      return {
+        apiName: api.apiName,
+        apiUrl: api.apiUrl,
+        apiData: data,
+      };
+    })
+  );
+  return results;
 };
 
-const myFun = powerOf(2);
-console.log(myFun(3)); //8
-```
-
-4. ### [Exercises for closures](https://github.com/orjwan-alrajaby/gsg-expressjs-backend-training-2023/blob/main/learning-sprint-1/week2-day2-tasks/tasks.md)
-
-```javascript
-const compose = (...fns) => {
-  return (arg) => {
-    let result = arg;
-    for (let i = fns.length - 1; i >= 0; i--) {
-      result = fns[i](result);
-    }
-    return result;
-  };
-};
-
-const myFunComposed = compose(
-  (n) => n * 3,
-  (n) => n / 2,
-  (n) => n + 4
-);
-
-console.log(myFunComposed(2)); // Output: 9
+executeInSequenceWithPromises(apis)
+  .then((results) => {
+    console.log(results);
+  })
+  .catch((error) => {
+    console.log("Error: ", error);
+  });
 ```
