@@ -4,12 +4,72 @@ Discover how the mathematical operation goes on with javascript and some convers
 
 ## Lesson Summary
 
--
+- Learn some js functions to check the types like `isNaN` and `typeof`.
+- Also to convert the values like `toString()`, `Number()` and `Boolean()`...
+- The implicit casting in js.
+- How `==` and `===` works.
 
 ## Coding Example
 
 ```javascript
+// Number type and coercion
+let num = 42;
+console.log(num); // 42
+console.log(typeof num); // "number"
 
+let numAsString = num.toString();
+console.log(numAsString); // "42"
+console.log(typeof numAsString); // "string"
+
+let numFromStr = Number(numAsString);
+console.log(numFromStr); // 42 (converted back to number)
+console.log(typeof numFromStr); // "number"
+
+// String type and coercion
+let str = "Hello";
+console.log(str); // "Hello"
+console.log(typeof str); // "string"
+
+let strLength = str.length;
+console.log(strLength); // 5 (length property)
+console.log(typeof strLength); // "number"
+
+let strConcat = str + " World";
+console.log(strConcat); // "Hello World"
+console.log(typeof strConcat); // "string"
+
+// Boolean type and coercion
+let bool = true;
+console.log(bool); // true
+console.log(typeof bool); // "boolean"
+
+let boolAsString = String(bool);
+console.log(boolAsString); // "true"
+console.log(typeof boolAsString); // "string"
+
+let boolFromStr = Boolean(boolAsString);
+console.log(boolFromStr); // true (converted back to boolean)
+console.log(typeof boolFromStr); // "boolean"
+
+// Coercion with loose equality operator
+console.log(42 == "42"); // true (coerces string to number)
+console.log(true == 1); // true (coerces boolean to number)
+
+console.log(0 == false); // true (coerces boolean to number)
+console.log("" == false); // true (coerces string to boolean)
+
+console.log(null == undefined); // true (both are loosely equal)
+console.log(null == 0); // false (null only loosely equals undefined)
+
+// Coercion with strict equality operator
+console.log(42 === "42"); // false (no coercion, different types)
+console.log(true === 1); // false (no coercion, different types)
+
+console.log(0 === false); // false (no coercion, different types)
+console.log("" === false); // false (no coercion, different types)
+
+console.log(null === undefined); // false (no coercion, different types)
+console.log(null === 0); // false (no coercion, different types)
 ```
 
 #### My Solution
