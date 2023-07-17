@@ -4,15 +4,20 @@ Discover how the mathematical operation goes on with javascript and some convers
 
 ## Lesson Summary
 
+- Primitive types: `undefined`, `string`, `number`, `boolean`, `object`, `symbol`.
+- Others behave like a type: `undeclared`, `null`, `function`, `array`, `bigint`.
+- The `object`, `function` and `array` are objects in javascript and the other above are not.
 - Learn some js functions to check the types like `isNaN` and `typeof`.
+- Nan is the only value that is not equal to itself `NanValue !== NanValue` so function Number.isNaN() exist in JS.
+- Type of NaN is invalid number (number).
 - Also to convert the values like `toString()`, `Number()` and `Boolean()`...
 - The implicit casting in js.
+- Converting -0 to string will be "0".
 - How `==` and `===` works.
 
 ## Coding Example
 
 ```javascript
-// Number type and coercion
 let num = 42;
 console.log(num); // 42
 console.log(typeof num); // "number"
