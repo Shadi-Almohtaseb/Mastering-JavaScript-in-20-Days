@@ -4,6 +4,18 @@
 
 ## Lesson Summary
 
+- Strict mode is generated automatically in js and it make a special behavior.
+- Strict mode example:
+  ```javascript
+  const fun = () => {
+    title = "Welcome"; // reference error
+    console.log(title);
+  };
+  ```
+  - The code above reference an error deo to strict mode.
+  - Undefined: means that it's declared but it's dose not have any value.
+  - Declared: means that it's has never declared on the whole program.
+
 ```javascript
 var teacher = "khaldoon"
 
