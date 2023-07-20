@@ -38,7 +38,16 @@ exercises provided by FreeCodeCamp to be a master in Javascript.
 
 ## Folder Structure
 
-- [**Day 1**](https://github.com/Shadi-Almohtaseb/Mastering-JavaScript-in-20-Days/tree/main/day1)
-- [**Day 2**](https://github.com/Shadi-Almohtaseb/Mastering-JavaScript-in-20-Days/tree/main/day2)
-- [**Day 3**](https://github.com/Shadi-Almohtaseb/Mastering-JavaScript-in-20-Days/tree/main/day3)
-- [**Day 4**](https://github.com/Shadi-Almohtaseb/Mastering-JavaScript-in-20-Days/tree/main/day4)
+- [**Day 1**](https://github.com/Shadi-Almohtaseb/Mastering-JavaScript-in-20-Days/tree/main/day1_Introduction_to_JS)
+- [**Day 2**](https://github.com/Shadi-Almohtaseb/Mastering-JavaScript-in-20-Days/tree/main/day2_Expressions_Arrays_Objects)
+- [**Day 3**](https://github.com/Shadi-Almohtaseb/Mastering-JavaScript-in-20-Days/tree/main/day3_Functions_scoping)
+- [**Day 4**](https://github.com/Shadi-Almohtaseb/Mastering-JavaScript-in-20-Days/tree/main/day4_Filter_Map_handlingEvents)
+- [**Day 5**](https://github.com/Shadi-Almohtaseb/Mastering-JavaScript-in-20-Days/tree/main/day5_Wiki_Character_App)
+- [**Day 6**](https://github.com/Shadi-Almohtaseb/Mastering-JavaScript-in-20-Days/tree/main/day6_Functions_Callbacks)
+- [**Day 7**](https://github.com/Shadi-Almohtaseb/Mastering-JavaScript-in-20-Days/tree/main/day7_ClosuresExercises)
+- [**Day 8**](https://github.com/Shadi-Almohtaseb/Mastering-JavaScript-in-20-Days/tree/main/day8_Async_Promises)
+- [**Day 9**](https://github.com/Shadi-Almohtaseb/Mastering-JavaScript-in-20-Days/tree/main/day9_Classes_Prototypes)
+- [**Day 10**](https://github.com/Shadi-Almohtaseb/Mastering-JavaScript-in-20-Days/tree/main/day10_Types_Coercion)
+- [**Day 11**](https://github.com/Shadi-Almohtaseb/Mastering-JavaScript-in-20-Days/tree/main/day11_Static_Type_Scope)
+- [**Day 12**](https://github.com/Shadi-Almohtaseb/Mastering-JavaScript-in-20-Days/tree/main/day12_Scope_Function_Expressions)
+- [**Day 13**](https://github.com/Shadi-Almohtaseb/Mastering-JavaScript-in-20-Days/tree/main/day13_Advanced_Scope_Closure)
