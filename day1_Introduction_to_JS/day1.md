@@ -4,6 +4,7 @@ Basics javascript commands, What is the Document Object Model `(DOM)` and how to
 
 ## Lesson Summary
 
+- DOM is a programming interface provided by web browsers that allow JavaScript code to interact with the content and structure of an HTML or XML document.
 - Use `let` and `const` to declare variables and make some simple calculations.
 - Some operators like += -= _= _=
 - Use Document to add, edit and read the elements of the web page, like `document.title` and `document.getElementById("board")` and `document.getElementById("p1-name").textContent = my content`.
