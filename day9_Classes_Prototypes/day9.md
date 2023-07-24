@@ -4,6 +4,7 @@ Dive into the exciting world of JavaScript classes and prototypes, Solid underst
 
 ## Lesson Summary
 
+- Prototypes are a fundamental concept in JavaScript's object-oriented nature. Every object in JavaScript has a prototype, which is another object from which it inherits properties and methods.
 - Recap of JavaScript classes and prototypes.
 - Applying classes and prototypes in real-world scenarios.
 - Best practices and common pitfalls to avoid when working with classes and prototypes.
