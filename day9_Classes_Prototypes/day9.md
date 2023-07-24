@@ -4,10 +4,10 @@ Dive into the exciting world of JavaScript classes and prototypes, Solid underst
 
 ## Lesson Summary
 
-    - Recap of JavaScript classes and prototypes.
-    - Applying classes and prototypes in real-world scenarios.
-    - Best practices and common pitfalls to avoid when working with classes and prototypes.
-    - Wrapping up the exploration of classes and prototypes.
+- Recap of JavaScript classes and prototypes.
+- Applying classes and prototypes in real-world scenarios.
+- Best practices and common pitfalls to avoid when working with classes and prototypes.
+- Wrapping up the exploration of classes and prototypes.
 
 ## Coding Example
 
