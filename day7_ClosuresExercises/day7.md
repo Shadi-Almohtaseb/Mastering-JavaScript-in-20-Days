@@ -4,9 +4,9 @@ It's about the `closure` concept which is the function that return another funct
 
 ## Lesson Summary
 
-- What is closure.
-- Function that remember the previous state.
-- How to implement closure in different ways.
+- What is closure: a concept in JavaScript that allows a function to "remember" its lexical scope even when the function is executed outside that scope. In simpler terms, a closure allows a function to maintain access to the variables and parameters of its outer (enclosing) function, even after the outer function has finished executing.
+- Function that remembers the previous state.
+- How to implement closure in different ways: When a function is defined within another function, it forms a closure. The inner function can access variables and parameters of the outer function
 - calling multi functions.
 
 ## Coding Example
