@@ -4,9 +4,9 @@ It's includes `Introduction`, `JavaScript Principles`, and `Functions & Callback
 
 ## Lesson Summary
 
-- What is generalized function.
-- Learn what is the `callback function` and how to use it.
-- How to implement the `higher order function` and passing the callback to it.
+- What is generalized function: it is a term used to describe a function that is designed to work with a wide range of input data and perform a specific task or operation on that data
+- Learn what is the `callback function` and how to use it: a callback function is a function that is passed as an argument to another function
+- How to implement the `higher order function` and passing the callback to it: A higher-order function is a function that takes one or more functions as arguments or returns a function as its result. 
 - Writing the callback as an arrow function.
 - doing a simple recursion function.
 
